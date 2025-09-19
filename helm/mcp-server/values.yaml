@@ -1,0 +1,53 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/OWNER/REPO # override in workflow or values
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 3000
+  targetPort: 3000
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+env:
+  - name: NODE_ENV
+    value: production
+
+container:
+  command: ["node"]
+  args: ["git-cicd-server.js"]
+  workingDir: /app/mcp-server
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: mcp.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
