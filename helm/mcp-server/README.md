@@ -19,3 +19,4 @@ helm upgrade --install mcp-server ./helm/mcp-server \
 - env: list of environment variables
 - container.command/args/workingDir: override container start
 - ingress.enabled: enable ingress
+
