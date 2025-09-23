@@ -242,3 +242,287 @@ redis-75cdc899ff-w4629   1/1     Running   0          54m
 [2025-09-23T07:25:33.927Z] 📊 Remote commit: dc00f777
 [2025-09-23T07:25:33.928Z] 📊 Local commit: dc00f777
 [2025-09-23T07:25:33.928Z] ✅ No new changes detected
+[2025-09-23T07:26:31.650Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:26:33.941Z] 📊 Remote commit: dc00f777
+[2025-09-23T07:26:33.942Z] 📊 Local commit: bc39081b
+[2025-09-23T07:26:33.942Z] 🆕 New changes detected! Starting automated deployment...
+[2025-09-23T07:26:33.942Z] 🔄 Pulling latest changes...
+[2025-09-23T07:26:35.958Z] 🚀 Deploying changes via GitOps...
+[2025-09-23T07:26:35.986Z] 📝 Changed files: gitops-monitor.log, helm/redis/values.yaml
+[2025-09-23T07:26:35.986Z] 🔴 Redis configuration changed - deploying Redis...
+[2025-09-23T07:26:35.986Z] 🔴 Deploying Redis with Helm...
+[2025-09-23T07:26:36.353Z] ⏳ Waiting for Redis deployment to be ready...
+[2025-09-23T07:26:36.607Z] 🔴 Redis deployment status:
+[2025-09-23T07:26:36.608Z] NAME                     READY   STATUS        RESTARTS   AGE
+redis-75cdc899ff-4drqh   1/1     Terminating   0          9m34s
+redis-75cdc899ff-4tght   1/1     Running       0          61m
+redis-75cdc899ff-cftcq   1/1     Terminating   0          7m
+redis-75cdc899ff-cz984   1/1     Running       0          49m
+redis-75cdc899ff-dcfdn   1/1     Running       0          61m
+redis-75cdc899ff-m7s9j   1/1     Terminating   0          9m34s
+redis-75cdc899ff-rgmtn   1/1     Terminating   0          9m34s
+redis-75cdc899ff-sng7z   1/1     Running       0          49m
+redis-75cdc899ff-w4629   1/1     Running       0          61m
+
+[2025-09-23T07:26:36.609Z] ✅ Automated deployment completed successfully!
+[2025-09-23T07:26:36.609Z] 📝 Last deployed commit updated to: dc00f777
+[2025-09-23T07:27:31.652Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:27:34.121Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:27:34.121Z] 📊 Local commit: bc39081b
+[2025-09-23T07:27:34.121Z] 🆕 New changes detected since last deployment! Starting automated deployment...
+[2025-09-23T07:27:34.122Z] 🔄 Pulling latest changes...
+[2025-09-23T07:27:36.043Z] 🚀 Deploying changes via GitOps...
+[2025-09-23T07:27:36.069Z] 📝 Changed files: gitops-monitor.log, helm/redis/values.yaml
+[2025-09-23T07:27:36.070Z] 🔴 Redis configuration changed - deploying Redis...
+[2025-09-23T07:27:36.070Z] 🔴 Deploying Redis with Helm...
+[2025-09-23T07:27:36.672Z] ⏳ Waiting for Redis deployment to be ready...
+[2025-09-23T07:27:36.849Z] 🔴 Redis deployment status:
+[2025-09-23T07:27:36.849Z] NAME                     READY   STATUS    RESTARTS   AGE
+redis-75cdc899ff-4tght   1/1     Running   0          62m
+redis-75cdc899ff-cz984   1/1     Running   0          50m
+redis-75cdc899ff-dcfdn   1/1     Running   0          62m
+redis-75cdc899ff-sng7z   1/1     Running   0          50m
+redis-75cdc899ff-w4629   1/1     Running   0          62m
+
+[2025-09-23T07:27:36.849Z] ✅ Automated deployment completed successfully!
+[2025-09-23T07:27:36.849Z] 📝 Last deployed commit updated to: bc39081b
+[2025-09-23T07:28:31.659Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:28:34.574Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:28:34.574Z] 📊 Local commit: bc39081b
+[2025-09-23T07:28:34.574Z] ✅ No new changes detected
+[2025-09-23T07:29:31.667Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:29:33.897Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:29:33.897Z] 📊 Local commit: bc39081b
+[2025-09-23T07:29:33.897Z] ✅ No new changes detected
+[2025-09-23T07:30:31.668Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:30:33.788Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:30:33.789Z] 📊 Local commit: bc39081b
+[2025-09-23T07:30:33.789Z] ✅ No new changes detected
+[2025-09-23T07:31:31.670Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:31:33.904Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:31:33.904Z] 📊 Local commit: bc39081b
+[2025-09-23T07:31:33.904Z] ✅ No new changes detected
+[2025-09-23T07:32:31.671Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:32:33.593Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:32:33.594Z] 📊 Local commit: bc39081b
+[2025-09-23T07:32:33.594Z] ✅ No new changes detected
+[2025-09-23T07:33:31.672Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:33:33.795Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:33:33.795Z] 📊 Local commit: bc39081b
+[2025-09-23T07:33:33.795Z] ✅ No new changes detected
+[2025-09-23T07:34:31.676Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:34:33.716Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:34:33.716Z] 📊 Local commit: bc39081b
+[2025-09-23T07:34:33.716Z] ✅ No new changes detected
+[2025-09-23T07:35:31.677Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:35:33.745Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:35:33.745Z] 📊 Local commit: bc39081b
+[2025-09-23T07:35:33.745Z] ✅ No new changes detected
+[2025-09-23T07:36:31.678Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:36:33.707Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:36:33.707Z] 📊 Local commit: bc39081b
+[2025-09-23T07:36:33.707Z] ✅ No new changes detected
+[2025-09-23T07:37:31.680Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:37:33.660Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:37:33.661Z] 📊 Local commit: bc39081b
+[2025-09-23T07:37:33.661Z] ✅ No new changes detected
+[2025-09-23T07:38:31.683Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:38:33.707Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:38:33.707Z] 📊 Local commit: bc39081b
+[2025-09-23T07:38:33.707Z] ✅ No new changes detected
+[2025-09-23T07:39:31.686Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:39:33.982Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:39:33.983Z] 📊 Local commit: bc39081b
+[2025-09-23T07:39:33.983Z] ✅ No new changes detected
+[2025-09-23T07:40:31.686Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:40:33.766Z] 📊 Remote commit: bc39081b
+[2025-09-23T07:40:33.767Z] 📊 Local commit: bc39081b
+[2025-09-23T07:40:33.767Z] ✅ No new changes detected
+[2025-09-23T08:21:48.170Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:21:50.417Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:21:50.417Z] 📊 Local commit: bc39081b
+[2025-09-23T08:21:50.417Z] ✅ No new changes detected
+[2025-09-23T08:39:59.932Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:40:02.489Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:40:02.489Z] 📊 Local commit: bc39081b
+[2025-09-23T08:40:02.490Z] ✅ No new changes detected
+[2025-09-23T08:40:59.941Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:41:02.268Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:41:02.269Z] 📊 Local commit: bc39081b
+[2025-09-23T08:41:02.269Z] ✅ No new changes detected
+[2025-09-23T08:43:15.932Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:43:18.317Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:43:18.318Z] 📊 Local commit: bc39081b
+[2025-09-23T08:43:18.318Z] ✅ No new changes detected
+[2025-09-23T08:44:15.934Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:44:18.137Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:44:18.137Z] 📊 Local commit: bc39081b
+[2025-09-23T08:44:18.137Z] ✅ No new changes detected
+[2025-09-23T08:45:15.936Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:45:17.987Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:45:17.987Z] 📊 Local commit: bc39081b
+[2025-09-23T08:45:17.987Z] ✅ No new changes detected
+[2025-09-23T08:46:15.938Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:46:18.197Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:46:18.197Z] 📊 Local commit: bc39081b
+[2025-09-23T08:46:18.198Z] ✅ No new changes detected
+[2025-09-23T08:47:15.940Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:47:18.139Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:47:18.140Z] 📊 Local commit: bc39081b
+[2025-09-23T08:47:18.140Z] ✅ No new changes detected
+[2025-09-23T08:48:15.940Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:48:18.277Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:48:18.278Z] 📊 Local commit: bc39081b
+[2025-09-23T08:48:18.278Z] ✅ No new changes detected
+[2025-09-23T08:52:07.357Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:52:09.723Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:52:09.723Z] 📊 Local commit: bc39081b
+[2025-09-23T08:52:09.723Z] ✅ No new changes detected
+[2025-09-23T08:53:07.358Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T08:53:10.023Z] 📊 Remote commit: bc39081b
+[2025-09-23T08:53:10.023Z] 📊 Local commit: bc39081b
+[2025-09-23T08:53:10.023Z] ✅ No new changes detected
+[2025-09-23T09:12:36.961Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:12:39.881Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:12:39.881Z] 📊 Local commit: bc39081b
+[2025-09-23T09:12:39.881Z] ✅ No new changes detected
+[2025-09-23T09:13:36.966Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:13:39.736Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:13:39.736Z] 📊 Local commit: bc39081b
+[2025-09-23T09:13:39.736Z] ✅ No new changes detected
+[2025-09-23T09:14:36.971Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:14:40.510Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:14:40.510Z] 📊 Local commit: bc39081b
+[2025-09-23T09:14:40.510Z] ✅ No new changes detected
+[2025-09-23T09:15:36.978Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:15:39.570Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:15:39.570Z] 📊 Local commit: bc39081b
+[2025-09-23T09:15:39.570Z] ✅ No new changes detected
+[2025-09-23T09:16:36.982Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:16:39.460Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:16:39.460Z] 📊 Local commit: bc39081b
+[2025-09-23T09:16:39.460Z] ✅ No new changes detected
+[2025-09-23T09:17:36.984Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:17:39.598Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:17:39.598Z] 📊 Local commit: bc39081b
+[2025-09-23T09:17:39.598Z] ✅ No new changes detected
+[2025-09-23T09:18:36.987Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:18:39.548Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:18:39.548Z] 📊 Local commit: bc39081b
+[2025-09-23T09:18:39.548Z] ✅ No new changes detected
+[2025-09-23T09:19:36.989Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:19:39.576Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:19:39.576Z] 📊 Local commit: bc39081b
+[2025-09-23T09:19:39.576Z] ✅ No new changes detected
+[2025-09-23T09:20:36.992Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:20:39.628Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:20:39.628Z] 📊 Local commit: bc39081b
+[2025-09-23T09:20:39.628Z] ✅ No new changes detected
+[2025-09-23T09:21:36.996Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:21:39.650Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:21:39.651Z] 📊 Local commit: bc39081b
+[2025-09-23T09:21:39.651Z] ✅ No new changes detected
+[2025-09-23T09:22:36.998Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:22:39.396Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:22:39.396Z] 📊 Local commit: bc39081b
+[2025-09-23T09:22:39.396Z] ✅ No new changes detected
+[2025-09-23T09:26:26.462Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:31:23.007Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:31:23.008Z] 📊 Local commit: bc39081b
+[2025-09-23T09:31:23.008Z] ✅ No new changes detected
+[2025-09-23T09:31:23.009Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:31:25.799Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:31:25.800Z] 📊 Local commit: bc39081b
+[2025-09-23T09:31:25.800Z] ✅ No new changes detected
+[2025-09-23T09:32:22.993Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:32:24.951Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:32:24.952Z] 📊 Local commit: bc39081b
+[2025-09-23T09:32:24.952Z] ✅ No new changes detected
+[2025-09-23T09:33:22.995Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:33:25.306Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:33:25.306Z] 📊 Local commit: bc39081b
+[2025-09-23T09:33:25.306Z] ✅ No new changes detected
+[2025-09-23T09:34:22.996Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:34:24.952Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:34:24.952Z] 📊 Local commit: bc39081b
+[2025-09-23T09:34:24.952Z] ✅ No new changes detected
+[2025-09-23T09:35:22.997Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:35:25.184Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:35:25.184Z] 📊 Local commit: bc39081b
+[2025-09-23T09:35:25.184Z] ✅ No new changes detected
+[2025-09-23T09:36:22.999Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:36:25.015Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:36:25.015Z] 📊 Local commit: bc39081b
+[2025-09-23T09:36:25.015Z] ✅ No new changes detected
+[2025-09-23T09:37:23.122Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:37:25.210Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:37:25.210Z] 📊 Local commit: bc39081b
+[2025-09-23T09:37:25.211Z] ✅ No new changes detected
+[2025-09-23T09:38:23.130Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:38:25.050Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:38:25.050Z] 📊 Local commit: bc39081b
+[2025-09-23T09:38:25.050Z] ✅ No new changes detected
+[2025-09-23T09:39:23.132Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:39:25.335Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:39:25.336Z] 📊 Local commit: bc39081b
+[2025-09-23T09:39:25.336Z] ✅ No new changes detected
+[2025-09-23T09:40:23.133Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:40:25.175Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:40:25.175Z] 📊 Local commit: bc39081b
+[2025-09-23T09:40:25.175Z] ✅ No new changes detected
+[2025-09-23T09:41:23.135Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:41:25.398Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:41:25.399Z] 📊 Local commit: bc39081b
+[2025-09-23T09:41:25.399Z] ✅ No new changes detected
+[2025-09-23T09:42:23.136Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:42:25.383Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:42:25.383Z] 📊 Local commit: bc39081b
+[2025-09-23T09:42:25.384Z] ✅ No new changes detected
+[2025-09-23T09:43:23.137Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:43:25.284Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:43:25.284Z] 📊 Local commit: bc39081b
+[2025-09-23T09:43:25.284Z] ✅ No new changes detected
+[2025-09-23T09:44:23.138Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:44:25.551Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:44:25.552Z] 📊 Local commit: bc39081b
+[2025-09-23T09:44:25.552Z] ✅ No new changes detected
+[2025-09-23T09:45:23.142Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:45:25.439Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:45:25.440Z] 📊 Local commit: bc39081b
+[2025-09-23T09:45:25.440Z] ✅ No new changes detected
+[2025-09-23T09:46:23.144Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:46:25.174Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:46:25.174Z] 📊 Local commit: bc39081b
+[2025-09-23T09:46:25.174Z] ✅ No new changes detected
+[2025-09-23T09:47:23.171Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:47:25.268Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:47:25.269Z] 📊 Local commit: bc39081b
+[2025-09-23T09:47:25.269Z] ✅ No new changes detected
+[2025-09-23T09:48:23.182Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T09:48:25.315Z] 📊 Remote commit: bc39081b
+[2025-09-23T09:48:25.316Z] 📊 Local commit: bc39081b
+[2025-09-23T09:48:25.316Z] ✅ No new changes detected
+[2025-09-23T10:05:47.362Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T10:09:42.661Z] 📊 Remote commit: bc39081b
+[2025-09-23T10:09:42.661Z] 📊 Local commit: bc39081b
+[2025-09-23T10:09:42.661Z] ✅ No new changes detected
+[2025-09-23T10:09:42.662Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T10:09:44.738Z] 📊 Remote commit: bc39081b
+[2025-09-23T10:09:44.738Z] 📊 Local commit: bc39081b
+[2025-09-23T10:09:44.739Z] ✅ No new changes detected
+[2025-09-23T10:54:40.124Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T10:54:43.069Z] 📊 Remote commit: bc39081b
+[2025-09-23T10:54:43.069Z] 📊 Local commit: bc39081b
+[2025-09-23T10:54:43.069Z] ✅ No new changes detected
+[2025-09-23T10:55:40.125Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T10:55:43.284Z] 📊 Remote commit: bc39081b
+[2025-09-23T10:55:43.285Z] 📊 Local commit: bc39081b
+[2025-09-23T10:55:43.285Z] ✅ No new changes detected
+[2025-09-23T11:08:07.660Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T11:08:09.763Z] 📊 Remote commit: bc39081b
+[2025-09-23T11:08:09.764Z] 📊 Local commit: bc39081b
+[2025-09-23T11:08:09.764Z] ✅ No new changes detected
+[2025-09-23T11:09:07.661Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T11:09:09.881Z] 📊 Remote commit: bc39081b
+[2025-09-23T11:09:09.881Z] 📊 Local commit: bc39081b
+[2025-09-23T11:09:09.881Z] ✅ No new changes detected
