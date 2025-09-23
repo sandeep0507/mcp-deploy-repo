@@ -194,3 +194,51 @@ redis-75cdc899ff-w4629   1/1     Running   0          52m
 [2025-09-23T07:18:31.640Z] 📊 Local commit: fd0d3528
 [2025-09-23T07:18:31.640Z] ✅ No new changes detected
 [2025-09-23T07:18:31.641Z] ✅ Auto GitOps Monitor started successfully!
+[2025-09-23T07:19:31.642Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:19:33.896Z] 📊 Remote commit: dc00f777
+[2025-09-23T07:19:33.896Z] 📊 Local commit: dc00f777
+[2025-09-23T07:19:33.896Z] 🆕 New changes detected since last deployment! Starting automated deployment...
+[2025-09-23T07:19:33.897Z] 🔄 Pulling latest changes...
+[2025-09-23T07:19:35.823Z] 🚀 Deploying changes via GitOps...
+[2025-09-23T07:19:35.861Z] 📝 Changed files: gitops-monitor.log, helm/redis/values.yaml, scripts/auto-gitops-monitor.js
+[2025-09-23T07:19:35.861Z] 🔴 Redis configuration changed - deploying Redis...
+[2025-09-23T07:19:35.862Z] 🔴 Deploying Redis with Helm...
+[2025-09-23T07:19:36.451Z] ⏳ Waiting for Redis deployment to be ready...
+[2025-09-23T07:19:37.796Z] 🔴 Redis deployment status:
+[2025-09-23T07:19:37.796Z] NAME                     READY   STATUS    RESTARTS   AGE
+redis-75cdc899ff-4drqh   1/1     Running   0          2m36s
+redis-75cdc899ff-4tght   1/1     Running   0          54m
+redis-75cdc899ff-cftcq   1/1     Running   0          2s
+redis-75cdc899ff-cz984   1/1     Running   0          42m
+redis-75cdc899ff-dcfdn   1/1     Running   0          54m
+redis-75cdc899ff-m7s9j   1/1     Running   0          2m36s
+redis-75cdc899ff-rgmtn   1/1     Running   0          2m36s
+redis-75cdc899ff-sng7z   1/1     Running   0          42m
+redis-75cdc899ff-w4629   1/1     Running   0          54m
+
+[2025-09-23T07:19:37.797Z] ✅ Automated deployment completed successfully!
+[2025-09-23T07:19:37.797Z] 📝 Last deployed commit updated to: dc00f777
+[2025-09-23T07:20:31.643Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:20:33.865Z] 📊 Remote commit: dc00f777
+[2025-09-23T07:20:33.865Z] 📊 Local commit: dc00f777
+[2025-09-23T07:20:33.866Z] ✅ No new changes detected
+[2025-09-23T07:21:31.644Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:21:33.848Z] 📊 Remote commit: dc00f777
+[2025-09-23T07:21:33.848Z] 📊 Local commit: dc00f777
+[2025-09-23T07:21:33.849Z] ✅ No new changes detected
+[2025-09-23T07:22:31.645Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:22:33.895Z] 📊 Remote commit: dc00f777
+[2025-09-23T07:22:33.895Z] 📊 Local commit: dc00f777
+[2025-09-23T07:22:33.895Z] ✅ No new changes detected
+[2025-09-23T07:23:31.646Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:23:33.912Z] 📊 Remote commit: dc00f777
+[2025-09-23T07:23:33.913Z] 📊 Local commit: dc00f777
+[2025-09-23T07:23:33.913Z] ✅ No new changes detected
+[2025-09-23T07:24:31.647Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:24:34.252Z] 📊 Remote commit: dc00f777
+[2025-09-23T07:24:34.253Z] 📊 Local commit: dc00f777
+[2025-09-23T07:24:34.253Z] ✅ No new changes detected
+[2025-09-23T07:25:31.649Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:25:33.927Z] 📊 Remote commit: dc00f777
+[2025-09-23T07:25:33.928Z] 📊 Local commit: dc00f777
+[2025-09-23T07:25:33.928Z] ✅ No new changes detected
