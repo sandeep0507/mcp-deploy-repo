@@ -526,3 +526,55 @@ redis-75cdc899ff-w4629   1/1     Running   0          62m
 [2025-09-23T11:09:09.881Z] 📊 Remote commit: bc39081b
 [2025-09-23T11:09:09.881Z] 📊 Local commit: bc39081b
 [2025-09-23T11:09:09.881Z] ✅ No new changes detected
+[2025-09-23T11:10:07.667Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T11:10:09.767Z] 📊 Remote commit: bc39081b
+[2025-09-23T11:10:09.768Z] 📊 Local commit: 2d931ad7
+[2025-09-23T11:10:09.768Z] 🆕 New changes detected! Starting automated deployment...
+[2025-09-23T11:10:09.769Z] 🔄 Pulling latest changes...
+[2025-09-23T11:10:11.745Z] 🚀 Deploying changes via GitOps...
+[2025-09-23T11:10:11.773Z] 📝 Changed files: argocd, gitops-monitor.log, helm/redis/values.yaml
+[2025-09-23T11:10:11.773Z] 🔴 Redis configuration changed - deploying Redis...
+[2025-09-23T11:10:11.773Z] 🔴 Deploying Redis with Helm...
+[2025-09-23T11:10:12.221Z] ⏳ Waiting for Redis deployment to be ready...
+[2025-09-23T11:10:14.043Z] 🔴 Redis deployment status:
+[2025-09-23T11:10:14.043Z] NAME                            READY   STATUS    RESTARTS   AGE
+redis-75cdc899ff-4tght          1/1     Running   0          4h45m
+redis-75cdc899ff-cz984          1/1     Running   0          4h32m
+redis-75cdc899ff-dcfdn          1/1     Running   0          4h45m
+redis-75cdc899ff-fxk4j          1/1     Running   0          2s
+redis-75cdc899ff-sng7z          1/1     Running   0          4h32m
+redis-75cdc899ff-w4629          1/1     Running   0          4h45m
+redis-gitops-567f47dd4d-577hq   1/1     Running   0          63s
+redis-gitops-567f47dd4d-dtnt2   1/1     Running   0          63s
+redis-gitops-567f47dd4d-g5v7c   1/1     Running   0          63s
+redis-gitops-567f47dd4d-tskqv   1/1     Running   0          63s
+redis-gitops-567f47dd4d-vffwd   1/1     Running   0          63s
+
+[2025-09-23T11:10:14.043Z] ✅ Automated deployment completed successfully!
+[2025-09-23T11:10:14.043Z] 📝 Last deployed commit updated to: bc39081b
+[2025-09-23T11:11:07.671Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T11:11:09.764Z] 📊 Remote commit: bc39081b
+[2025-09-23T11:11:09.764Z] 📊 Local commit: 2d931ad7
+[2025-09-23T11:11:09.765Z] 🆕 New changes detected! Starting automated deployment...
+[2025-09-23T11:11:09.765Z] 🔄 Pulling latest changes...
+[2025-09-23T11:11:11.730Z] 🚀 Deploying changes via GitOps...
+[2025-09-23T11:11:11.757Z] 📝 Changed files: argocd, gitops-monitor.log, helm/redis/values.yaml
+[2025-09-23T11:11:11.757Z] 🔴 Redis configuration changed - deploying Redis...
+[2025-09-23T11:11:11.757Z] 🔴 Deploying Redis with Helm...
+[2025-09-23T11:11:12.164Z] ⏳ Waiting for Redis deployment to be ready...
+[2025-09-23T11:11:12.348Z] 🔴 Redis deployment status:
+[2025-09-23T11:11:12.349Z] NAME                            READY   STATUS    RESTARTS   AGE
+redis-75cdc899ff-4tght          1/1     Running   0          4h46m
+redis-75cdc899ff-cz984          1/1     Running   0          4h33m
+redis-75cdc899ff-dcfdn          1/1     Running   0          4h46m
+redis-75cdc899ff-fxk4j          1/1     Running   0          60s
+redis-75cdc899ff-sng7z          1/1     Running   0          4h33m
+redis-75cdc899ff-w4629          1/1     Running   0          4h46m
+redis-gitops-567f47dd4d-577hq   1/1     Running   0          2m1s
+redis-gitops-567f47dd4d-dtnt2   1/1     Running   0          2m1s
+redis-gitops-567f47dd4d-g5v7c   1/1     Running   0          2m1s
+redis-gitops-567f47dd4d-tskqv   1/1     Running   0          2m1s
+redis-gitops-567f47dd4d-vffwd   1/1     Running   0          2m1s
+
+[2025-09-23T11:11:12.349Z] ✅ Automated deployment completed successfully!
+[2025-09-23T11:11:12.349Z] 📝 Last deployed commit updated to: bc39081b
