@@ -1,0 +1,16 @@
+apiVersion: v2
+name: test-app
+description: A simple test application for GitOps workflow demonstration
+version: 1.0.0
+appVersion: "1.0"
+type: application
+
+maintainers:
+  - name: GitOps Team
+    email: gitops@example.com
+
+keywords:
+  - test
+  - gitops
+  - demo
+  - nginx

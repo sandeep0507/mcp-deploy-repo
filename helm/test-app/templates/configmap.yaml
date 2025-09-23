@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.app.name }}-config
+  labels:
+    app: {{ .Values.app.name }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    environment: {{ .Values.app.environment }}
+data:
+  app.name: {{ .Values.app.name | quote }}
+  app.environment: {{ .Values.app.environment | quote }}
+  app.version: {{ .Chart.Version | quote }}
+  nginx.conf: |
+    server {
+        listen 80;
+        server_name localhost;
+        
+        location / {
+            root   /usr/share/nginx/html;
+            index  index.html index.htm;
+        }
+        
+        location /health {
+            access_log off;
+            return 200 "healthy\n";
+            add_header Content-Type text/plain;
+        }
+        
+        location /info {
+            access_log off;
+            return 200 "GitOps Test App - {{ .Values.app.name }} v{{ .Chart.Version }}\n";
+            add_header Content-Type text/plain;
+        }
+    }
