@@ -47,14 +47,15 @@
 [2025-09-23T07:06:10.966Z] 📊 Remote commit: 450116ae
 [2025-09-23T07:06:10.966Z] 📊 Local commit: 450116ae
 [2025-09-23T07:06:10.966Z] ✅ No new changes detected
-Z] 📊 Local commit: 8183c2a2
-[2025-09-23T06:50:49.205Z] ✅ No new changes detected
-[2025-09-23T06:51:08.687Z] 🔍 Checking for changes in remote repository...
-[2025-09-23T06:51:10.580Z] 📊 Remote commit: 8183c2a2
-[2025-09-23T06:51:10.580Z] 📊 Local commit: 8183c2a2
-[2025-09-23T06:51:10.580Z] ✅ No new changes detected
-[2025-09-23T06:51:56.319Z] 🔍 Checking for changes in remote repository...
-[2025-09-23T06:51:58.504Z] 📊 Remote commit: ac85bbb4
+[2025-09-23T07:09:08.707Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:09:10.886Z] 📊 Remote commit: a5d58a37
+[2025-09-23T07:09:10.886Z] 📊 Local commit: a5d58a37
+[2025-09-23T07:09:10.886Z] ✅ No new changes detected
+
+🛑 Received SIGTERM, shutting down gracefully...
+[2025-09-23T07:10:45.072Z] 🛑 Stopping Auto GitOps Monitor...
+[2025-09-23T07:10:45.073Z] ✅ Auto GitOps Monitor stopped
+06:51:58.504Z] 📊 Remote commit: ac85bbb4
 [2025-09-23T06:51:58.504Z] 📊 Local commit: ac85bbb4
 [2025-09-23T06:51:58.505Z] ✅ No new changes detected
 [2025-09-23T06:53:46.973Z] 🔍 Checking for changes in remote repository...
@@ -109,3 +110,28 @@ Z] 📊 Local commit: 8183c2a2
 [2025-09-23T07:06:10.966Z] 📊 Remote commit: 450116ae
 [2025-09-23T07:06:10.966Z] 📊 Local commit: 450116ae
 [2025-09-23T07:06:10.966Z] ✅ No new changes detected
+[2025-09-23T07:08:47.001Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:08:49.027Z] 📊 Remote commit: a5d58a37
+[2025-09-23T07:08:49.028Z] 📊 Local commit: a5d58a37
+[2025-09-23T07:08:49.028Z] ✅ No new changes detected
+[2025-09-23T07:09:08.707Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:09:10.886Z] 📊 Remote commit: a5d58a37
+[2025-09-23T07:09:10.886Z] 📊 Local commit: a5d58a37
+[2025-09-23T07:09:10.886Z] ✅ No new changes detected
+[2025-09-23T07:10:45.072Z] 🛑 Stopping Auto GitOps Monitor...
+[2025-09-23T07:10:45.072Z] ✅ Auto GitOps Monitor stopped
+[2025-09-23T07:10:45.072Z] 🛑 Stopping Auto GitOps Monitor...
+[2025-09-23T07:10:45.073Z] ✅ Auto GitOps Monitor stopped
+[2025-09-23T07:10:47.131Z] 🚀 Starting Auto GitOps Monitor...
+[2025-09-23T07:10:47.134Z] ⏰ Check interval: 180 seconds
+[2025-09-23T07:10:47.134Z] 📁 Repository: /Users/sbd665/Mcp-server/mcp-deploy-repo
+[2025-09-23T07:10:47.134Z] 🌐 Remote: https://github.com/SKSTAE/mcp-deploy-repo.git
+[2025-09-23T07:10:47.134Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:10:49.382Z] 📊 Remote commit: a5d58a37
+[2025-09-23T07:10:49.382Z] 📊 Local commit: a5d58a37
+[2025-09-23T07:10:49.382Z] ✅ No new changes detected
+[2025-09-23T07:10:49.383Z] ✅ Auto GitOps Monitor started successfully!
+[2025-09-23T07:11:07.665Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:11:09.663Z] 📊 Remote commit: a5d58a37
+[2025-09-23T07:11:09.663Z] 📊 Local commit: a5d58a37
+[2025-09-23T07:11:09.664Z] ✅ No new changes detected

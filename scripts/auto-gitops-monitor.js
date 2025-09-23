@@ -10,6 +10,7 @@ class AutoGitOpsMonitor {
         this.remoteUrl = 'https://github.com/SKSTAE/mcp-deploy-repo.git';
         this.checkInterval = 3 * 60 * 1000; // 3 minutes in milliseconds
         this.lastCommitHash = null;
+        this.lastDeployedCommit = null;
         this.isRunning = false;
         this.logFile = path.join(this.repoPath, 'gitops-monitor.log');
     }
@@ -45,9 +46,12 @@ class AutoGitOpsMonitor {
             this.log(`📊 Remote commit: ${remoteCommitHash.substring(0, 8)}`);
             this.log(`📊 Local commit: ${localCommitHash.substring(0, 8)}`);
             
-            // Check if there are new changes
+            // Check if there are new changes since last deployment
             if (remoteCommitHash !== localCommitHash) {
                 this.log('🆕 New changes detected! Starting automated deployment...');
+                await this.deployChanges(remoteCommitHash);
+            } else if (this.lastDeployedCommit && remoteCommitHash !== this.lastDeployedCommit) {
+                this.log('🆕 New changes detected since last deployment! Starting automated deployment...');
                 await this.deployChanges(remoteCommitHash);
             } else {
                 this.log('✅ No new changes detected');
@@ -85,6 +89,10 @@ class AutoGitOpsMonitor {
             }
             
             this.log('✅ Automated deployment completed successfully!');
+            
+            // Update last deployed commit
+            this.lastDeployedCommit = commitHash;
+            this.log(`📝 Last deployed commit updated to: ${this.lastDeployedCommit.substring(0, 8)}`);
             
         } catch (error) {
             this.log(`❌ Error during deployment: ${error.message}`);
