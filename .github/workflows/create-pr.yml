@@ -1,0 +1,40 @@
+name: Create Pull Request
+
+on:
+  push:
+    branches: [ feature/* ]
+  workflow_dispatch:
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Create Pull Request
+      uses: repo-sync/pull-request@v2
+      with:
+        source_branch: "feature/redis-namespace-change"
+        destination_branch: "main"
+        pr_title: "feat: Change Redis namespace from redis to redis-prod"
+        pr_body: |
+          ## Changes Made
+          - Add complete Redis Helm chart with deployment, service, and helpers
+          - Change namespace from redis to redis-prod for production environment
+          - Add GitHub Actions workflow for automatic deployment
+          - Include proper resource limits and health checks
+          
+          ## Testing
+          - [ ] Redis deploys successfully in redis-prod namespace
+          - [ ] All pods are running and healthy
+          - [ ] Service is accessible
+          
+          ## Deployment
+          This PR will automatically deploy Redis to the redis-prod namespace when merged.
+        pr_label: "enhancement,redis,namespace"
+        pr_assignee: "sbd665"
+        pr_reviewer: "sbd665"
