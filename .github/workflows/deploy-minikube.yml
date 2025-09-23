@@ -42,3 +42,4 @@ jobs:
             --set image.tag=${{ vars.IMAGE_TAG || 'latest' }} \
             --set service.port=3000 \
             --set service.targetPort=3000
+

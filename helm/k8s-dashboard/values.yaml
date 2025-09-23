@@ -1,0 +1,48 @@
+replicaCount: 1
+
+image:
+  repository: node
+  tag: "18-alpine"
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: NodePort
+  port: 3000
+  targetPort: 3000
+  nodePort: 30080
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: k8s-dashboard.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+config:
+  mcpServerPath: "/app/minikube-monitor-server.js"
+  port: 3000
+
+# ConfigMap for application files
+appFiles:
+  enabled: true
