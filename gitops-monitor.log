@@ -1,13 +1,11 @@
-[2025-09-23T06:35:37.447Z] 🔍 Checking for changes in remote repository...
-[2025-09-23T06:35:39.655Z] 📊 Remote commit: bf6498ba
-[2025-09-23T06:35:39.655Z] 📊 Local commit: bf6498ba
-[2025-09-23T06:35:39.656Z] ✅ No new changes detected
-[2025-09-23T06:35:43.352Z] 🚀 Starting Auto GitOps Monitor...
-[2025-09-23T06:35:43.355Z] ⏰ Check interval: 180 seconds
-[2025-09-23T06:35:43.355Z] 📁 Repository: /Users/sbd665/Mcp-server/mcp-deploy-repo
-[2025-09-23T06:35:43.355Z] 🌐 Remote: https://github.com/SKSTAE/mcp-deploy-repo.git
-[2025-09-23T06:35:43.355Z] 🔍 Checking for changes in remote repository...
-[2025-09-23T06:35:46.964Z] 📊 Remote commit: bf6498ba
-[2025-09-23T06:35:46.964Z] 📊 Local commit: bf6498ba
-[2025-09-23T06:35:46.964Z] ✅ No new changes detected
-[2025-09-23T06:35:46.965Z] ✅ Auto GitOps Monitor started successfully!
+[2025-09-23T06:36:06.109Z] 🚀 Starting Auto GitOps Monitor...
+[2025-09-23T06:36:06.111Z] ⏰ Check interval: 180 seconds
+[2025-09-23T06:36:06.111Z] 📁 Repository: /Users/sbd665/Mcp-server/mcp-deploy-repo
+[2025-09-23T06:36:06.111Z] 🌐 Remote: https://github.com/SKSTAE/mcp-deploy-repo.git
+[2025-09-23T06:36:06.111Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T06:36:08.677Z] 📊 Remote commit: e3a48eca
+[2025-09-23T06:36:08.677Z] 📊 Local commit: e3a48eca
+[2025-09-23T06:36:08.677Z] ✅ No new changes detected
+[2025-09-23T06:36:08.678Z] ✅ Auto GitOps Monitor started successfully!
+ges detected
+[2025-09-23T06:36:08.678Z] ✅ Auto GitOps Monitor started successfully!
