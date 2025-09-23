@@ -1,0 +1,62 @@
+# Default values for gitops-monitor
+# This is a YAML-formatted file.
+
+replicaCount: 1
+
+image:
+  repository: node
+  pullPolicy: IfNotPresent
+  tag: "18-alpine"
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: gitops-monitor.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+# GitOps Monitor Configuration
+monitor:
+  checkInterval: 180  # 3 minutes in seconds
+  repoUrl: "https://github.com/SKSTAE/mcp-deploy-repo.git"
+  repoPath: "/app/repo"
+  logLevel: "info"
+
+# Git Configuration
+git:
+  user:
+    name: "GitOps Monitor"
+    email: "gitops-monitor@example.com"
+
+# Service Account Configuration
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""

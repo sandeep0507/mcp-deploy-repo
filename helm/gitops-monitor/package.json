@@ -1,0 +1,16 @@
+{
+  "name": "gitops-monitor",
+  "version": "1.0.0",
+  "description": "Automated GitOps monitoring service",
+  "main": "monitor.js",
+  "scripts": {
+    "start": "node monitor.js start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "keywords": ["gitops", "kubernetes", "monitoring"],
+  "author": "GitOps Monitor",
+  "license": "MIT"
+}

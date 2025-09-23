@@ -1,0 +1,104 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "gitops-monitor.fullname" . }}
+  labels:
+    {{- include "gitops-monitor.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "gitops-monitor.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "gitops-monitor.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "gitops-monitor.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["sh"]
+          args: 
+            - -c
+            - |
+              apk add --no-cache git curl openssl
+              curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+              chmod +x kubectl
+              mv kubectl /usr/local/bin/
+              curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | sh
+              node /app/monitor.js start
+          env:
+            - name: CHECK_INTERVAL
+              value: "{{ .Values.monitor.checkInterval }}"
+            - name: REPO_URL
+              value: "{{ .Values.monitor.repoUrl }}"
+            - name: REPO_PATH
+              value: "{{ .Values.monitor.repoPath }}"
+            - name: LOG_LEVEL
+              value: "{{ .Values.monitor.logLevel }}"
+            - name: GIT_USER_NAME
+              value: "{{ .Values.git.user.name }}"
+            - name: GIT_USER_EMAIL
+              value: "{{ .Values.git.user.email }}"
+          livenessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - "ps aux | grep -v grep | grep node"
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - "ps aux | grep -v grep | grep node"
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: monitor-script
+              mountPath: /app/monitor.js
+              subPath: monitor.js
+            - name: repo-volume
+              mountPath: /app/repo-temp
+            - name: logs-volume
+              mountPath: /app/logs
+      volumes:
+        - name: monitor-script
+          configMap:
+            name: {{ include "gitops-monitor.fullname" . }}-script
+        - name: repo-volume
+          emptyDir: {}
+        - name: logs-volume
+          emptyDir: {}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
