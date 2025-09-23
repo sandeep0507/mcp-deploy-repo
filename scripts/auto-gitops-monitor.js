@@ -162,6 +162,18 @@ class AutoGitOpsMonitor {
         
         this.isRunning = true;
         
+        // Initialize lastDeployedCommit to current commit
+        try {
+            const currentCommit = execSync('git rev-parse HEAD', { 
+                cwd: this.repoPath, 
+                encoding: 'utf8' 
+            }).trim();
+            this.lastDeployedCommit = currentCommit;
+            this.log(`📝 Initialized lastDeployedCommit to: ${this.lastDeployedCommit.substring(0, 8)}`);
+        } catch (error) {
+            this.log(`⚠️ Could not initialize lastDeployedCommit: ${error.message}`);
+        }
+        
         // Initial check
         this.checkForChanges();
         
