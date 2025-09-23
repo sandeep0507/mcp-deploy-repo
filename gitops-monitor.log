@@ -159,3 +159,38 @@
 [2025-09-23T07:13:57.082Z] 📊 Local commit: a7b00ef8
 [2025-09-23T07:13:57.082Z] ✅ No new changes detected
 [2025-09-23T07:13:57.082Z] ✅ Auto GitOps Monitor started successfully!
+[2025-09-23T07:16:57.083Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:16:59.284Z] 📊 Remote commit: fd0d3528
+[2025-09-23T07:16:59.285Z] 📊 Local commit: fd0d3528
+[2025-09-23T07:16:59.285Z] 🆕 New changes detected since last deployment! Starting automated deployment...
+[2025-09-23T07:16:59.285Z] 🔄 Pulling latest changes...
+[2025-09-23T07:17:01.330Z] 🚀 Deploying changes via GitOps...
+[2025-09-23T07:17:01.363Z] 📝 Changed files: gitops-monitor.log, helm/redis/values.yaml, scripts/auto-gitops-monitor.js
+[2025-09-23T07:17:01.364Z] 🔴 Redis configuration changed - deploying Redis...
+[2025-09-23T07:17:01.364Z] 🔴 Deploying Redis with Helm...
+[2025-09-23T07:17:01.843Z] ⏳ Waiting for Redis deployment to be ready...
+[2025-09-23T07:17:03.300Z] 🔴 Redis deployment status:
+[2025-09-23T07:17:03.300Z] NAME                     READY   STATUS    RESTARTS   AGE
+redis-75cdc899ff-4drqh   1/1     Running   0          1s
+redis-75cdc899ff-4tght   1/1     Running   0          52m
+redis-75cdc899ff-cz984   1/1     Running   0          39m
+redis-75cdc899ff-dcfdn   1/1     Running   0          52m
+redis-75cdc899ff-m7s9j   1/1     Running   0          1s
+redis-75cdc899ff-rgmtn   1/1     Running   0          1s
+redis-75cdc899ff-sng7z   1/1     Running   0          39m
+redis-75cdc899ff-w4629   1/1     Running   0          52m
+
+[2025-09-23T07:17:03.300Z] ✅ Automated deployment completed successfully!
+[2025-09-23T07:17:03.301Z] 📝 Last deployed commit updated to: fd0d3528
+[2025-09-23T07:18:27.319Z] 🛑 Stopping Auto GitOps Monitor...
+[2025-09-23T07:18:27.320Z] ✅ Auto GitOps Monitor stopped
+[2025-09-23T07:18:29.390Z] 🚀 Starting Auto GitOps Monitor...
+[2025-09-23T07:18:29.393Z] ⏰ Check interval: 60 seconds
+[2025-09-23T07:18:29.393Z] 📁 Repository: /Users/sbd665/Mcp-server/mcp-deploy-repo
+[2025-09-23T07:18:29.393Z] 🌐 Remote: https://github.com/SKSTAE/mcp-deploy-repo.git
+[2025-09-23T07:18:29.421Z] 📝 Initialized lastDeployedCommit to: fd0d3528
+[2025-09-23T07:18:29.421Z] 🔍 Checking for changes in remote repository...
+[2025-09-23T07:18:31.640Z] 📊 Remote commit: fd0d3528
+[2025-09-23T07:18:31.640Z] 📊 Local commit: fd0d3528
+[2025-09-23T07:18:31.640Z] ✅ No new changes detected
+[2025-09-23T07:18:31.641Z] ✅ Auto GitOps Monitor started successfully!

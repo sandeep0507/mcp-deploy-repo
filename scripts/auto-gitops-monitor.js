@@ -8,7 +8,7 @@ class AutoGitOpsMonitor {
     constructor() {
         this.repoPath = '/Users/sbd665/Mcp-server/mcp-deploy-repo';
         this.remoteUrl = 'https://github.com/SKSTAE/mcp-deploy-repo.git';
-        this.checkInterval = 3 * 60 * 1000; // 3 minutes in milliseconds
+        this.checkInterval = 1 * 60 * 1000; // 1 minute in milliseconds
         this.lastCommitHash = null;
         this.lastDeployedCommit = null;
         this.isRunning = false;
@@ -156,7 +156,7 @@ class AutoGitOpsMonitor {
         }
 
         this.log('🚀 Starting Auto GitOps Monitor...');
-        this.log(`⏰ Check interval: ${this.checkInterval / 1000} seconds`);
+        this.log(`⏰ Check interval: ${this.checkInterval / 1000 / 60} minutes`);
         this.log(`📁 Repository: ${this.repoPath}`);
         this.log(`🌐 Remote: ${this.remoteUrl}`);
         
