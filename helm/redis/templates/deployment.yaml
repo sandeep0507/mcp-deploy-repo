@@ -35,15 +35,15 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: http
+            - name: redis
               containerPort: 6379
               protocol: TCP
           livenessProbe:
             tcpSocket:
-              port: http
+              port: 6379
           readinessProbe:
             tcpSocket:
-              port: http
+              port: 6379
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

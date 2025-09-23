@@ -1,0 +1,56 @@
+name: Minikube GitOps Deployment
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'helm/redis/**' ]
+  workflow_dispatch:
+
+jobs:
+  deploy-to-minikube:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Set up Helm
+      uses: azure/setup-helm@v3
+      with:
+        version: '3.12.0'
+        
+    - name: Install Minikube
+      uses: medyagh/gimme-action@v1
+      with:
+        version: 1.21.0
+        
+    - name: Start Minikube
+      run: |
+        minikube start --driver=docker
+        minikube status
+        
+    - name: Create namespace
+      run: |
+        kubectl create namespace redis-prod --dry-run=client -o yaml | kubectl apply -f -
+        
+    - name: Deploy Redis with Helm
+      run: |
+        helm upgrade --install redis ./helm/redis \
+          --namespace redis-prod \
+          --set namespace=redis-prod \
+          --wait --timeout=5m
+          
+    - name: Verify deployment
+      run: |
+        kubectl get pods -n redis-prod
+        kubectl get services -n redis-prod
+        kubectl describe deployment redis -n redis-prod
+        
+    - name: Test Redis connection
+      run: |
+        kubectl run redis-test --image=redis:alpine --rm -it --restart=Never -- redis-cli -h redis-service.redis-prod.svc.cluster.local ping
+        
+    - name: Show resource limits
+      run: |
+        echo "Current Redis resource limits:"
+        kubectl get deployment redis -n redis-prod -o jsonpath='{.spec.template.spec.containers[0].resources}' | jq .
