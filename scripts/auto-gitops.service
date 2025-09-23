@@ -1,0 +1,15 @@
+[Unit]
+Description=Auto GitOps Monitor
+After=network.target
+
+[Service]
+Type=simple
+User=sbd665
+WorkingDirectory=/Users/sbd665/Mcp-server/mcp-deploy-repo
+ExecStart=/usr/local/bin/node /Users/sbd665/Mcp-server/mcp-deploy-repo/scripts/auto-gitops-monitor.js start
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
