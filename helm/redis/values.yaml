@@ -1,7 +1,7 @@
 # Default values for redis
 # This is a YAML-formatted file.
 
-replicaCount: 4
+replicaCount: 5
 
 image:
   repository: redis
