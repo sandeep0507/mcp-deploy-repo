@@ -18,3 +18,4 @@ spec:
   selector:
     app: {{ .Values.app.name }}
     release: {{ .Release.Name }}
+

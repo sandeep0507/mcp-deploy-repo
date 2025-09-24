@@ -1,30 +1,32 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-app-gitops
+  name: redis-gitops
   namespace: argocd
   labels:
-    app: test-app
+    app: redis
     environment: production
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   project: default
   source:
     repoURL: https://github.com/sandeep0507/mcp-deploy-repo.git
     targetRevision: HEAD
-    path: helm/test-app
+    path: helm/redis
     helm:
       valueFiles:
         - values.yaml
       parameters:
         - name: replicaCount
           value: "3"
-        - name: app.environment
-          value: "production"
+        - name: resources.limits.memory
+          value: "512Mi"
+        - name: resources.requests.memory
+          value: "256Mi"
   destination:
     server: https://kubernetes.default.svc
-    namespace: test-app-prod
+    namespace: redis-prod
   syncPolicy:
     automated:
       prune: true
@@ -39,4 +41,3 @@ spec:
         factor: 2
         maxDuration: 3m
   revisionHistoryLimit: 10
-
