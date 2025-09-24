@@ -1,0 +1,11 @@
+replicaCount: 2
+image:
+  repository: nginx
+  tag: "1.21"
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 80
+app:
+  name: live-demo-737
+  environment: demo
