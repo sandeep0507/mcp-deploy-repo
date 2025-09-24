@@ -1,5 +1,5 @@
 # Default values for test-app
-replicaCount: 3
+replicaCount: 5
 
 image:
   repository: nginx
